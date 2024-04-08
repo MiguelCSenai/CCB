@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
-import logo from '../Imagens/Logo.png'
+import logo from '../Imagens/logo.png';
 
 function Login() {
 
@@ -20,43 +20,42 @@ function Login() {
 
     <>
 
+
     <div className='body'>
+    <div className='fundo'/>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-      <div className="bodycontainer"></div>
 
       <div className="MainDivLogin">
 
         <img src={logo} alt='logo' className="logo" draggable="false"/>
 
-        <h1 className="titulo oswald-large">The Final Touch</h1>
+        <div className='divTitulo'>
+
+          <h1 className="titulo licorice">Camila Caires</h1>
+          <h3 className="subtitulo">Boleria</h3>
+
+        </div>
 
         <form>
 
-        <div className="InputContainer reddit-mono-medium">
+        <div className="InputContainer roboto-condensed-strong">
 
-          <input type="email" name="user" id="EmailInput" className="TextInput" required={true} onChange={handleInputChange}/>
-          <label htmlFor="EmailInput" className={inputValue !== '' ? "ativado" : "desativado"}>Email ou nome de usuário</label>
-
-        </div>
-        <div className="InputContainer reddit-mono-medium"> 
-
-          <input type="password" name="senha" id="PassInput" className="TextInput"required={true} onChange={handleInputChange2}/>
-          <label htmlFor="PassInput" className={inputValue2 !== '' ? "ativado" : "desativado"}>Senha</label>
+          <input type="name" name="user" id="EmailInput" className="TextInput  roboto-condensed-large" required={true} onChange={handleInputChange}/>
+          <label htmlFor="EmailInput" className={inputValue !== '' ? "ativado" : "desativado"}>Nome Completo</label>
 
         </div>
+        <div className="InputContainer roboto-condensed-strong" id='tel'> 
 
-          <div className="btnLogin">
+        <input type="number" name="senha" id="PassInput" className="TextInput roboto-condensed-medium" maxlength="11" minlength="11" required={true} onChange={handleInputChange2}/>
+          <label htmlFor="PassInput" className={inputValue2 !== '' ? "ativado" : "desativado"}>Telefone</label>
 
-            <input type="submit" value="Log in" className="Login"></input>
+        </div>
+
+          <div className="btn login">
+
+            <input type="submit" value="Registrar-se" className="text Login"></input>
                       
-          </div>
-
-          <div className="btnSignin">
-
-            <input type="submit" value="Signin" className="Signin"></input>
-          
           </div>
 
         </form>
